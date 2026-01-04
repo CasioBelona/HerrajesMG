@@ -165,3 +165,19 @@ color:#aaa
     font-size: 0.9rem;
   }
 }
+
+
+/* =====================
+   MOBILE ICON SPACING
+   ===================== */
+@media (max-width: 768px) {
+
+  .topbar-right {
+    padding-right: 0.9rem;
+  }
+
+  .topbar-right .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
