@@ -121,3 +121,47 @@ text-align:center;
 font-size:.8rem;
 color:#aaa
 }
+
+
+/* =====================
+   MOBILE HEADER FIX
+   ===================== */
+@media (max-width: 768px) {
+
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .topbar-left {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .topbar-right {
+    align-self: flex-end;
+    gap: 0.75rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    height: 64px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .nav a {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+}
