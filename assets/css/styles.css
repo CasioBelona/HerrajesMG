@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
 }
 
 .topbar-left span {
@@ -47,13 +47,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0;
+  padding: 1.4rem 0;
 }
 
 .logo {
-  height: 70px;
+  height: 90px;
 }
 
+/* NAV */
 .nav a {
   color: #fff;
   text-decoration: none;
@@ -74,9 +75,7 @@ body {
   background: radial-gradient(circle at top, rgba(225,6,0,0.25), transparent 60%);
 }
 
-.hero-content {
-  position: relative;
-}
+.hero-content { position: relative; }
 
 .hero h1 {
   font-family: 'Montserrat', sans-serif;
@@ -135,6 +134,30 @@ body {
 .address {
   color: #ccc;
   font-size: 0.9rem;
+}
+
+/* BOTTOM SOCIAL */
+.social-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social {
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+.social.instagram {
+  background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+.social.facebook {
+  background: #1877f2;
 }
 
 /* FOOTER */
