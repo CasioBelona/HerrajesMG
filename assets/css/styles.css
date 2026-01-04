@@ -24,13 +24,33 @@ justify-content:space-between;
 align-items:center;
 padding:.45rem 0
 }
-.topbar-right a{
-margin-left:1rem
+.topbar-right{
+display:flex;
+gap:1rem
 }
-.topbar-right svg{
+
+/* ICONS VIA MASK */
+.icon{
 width:16px;
 height:16px;
-fill:#fff
+background:#fff;
+display:inline-block;
+mask-size:contain;
+mask-repeat:no-repeat;
+mask-position:center;
+-webkit-mask-size:contain;
+-webkit-mask-repeat:no-repeat;
+-webkit-mask-position:center;
+}
+
+.icon.fb{
+mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91V117.78c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.2V288z"/></svg>');
+-webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91V117.78c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.2V288z"/></svg>');
+}
+
+.icon.ig{
+mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 4.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm6-1.9a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg>');
+-webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 4.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm6-1.9a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg>');
 }
 
 /* HEADER */
@@ -60,22 +80,14 @@ letter-spacing:.03em
 padding:4.5rem 0;
 text-align:center
 }
-.hero h1{
-font-size:2.6rem
-}
-.hero h2{
-color:#e10600;
-font-size:1.1rem
-}
+.hero h2{color:#e10600}
 
 /* SECTIONS */
 .section{
 padding:4rem 0;
 text-align:center
 }
-.section.dark{
-background:#141414
-}
+.section.dark{background:#141414}
 .store-img{
 width:100%;
 max-width:720px;
@@ -99,9 +111,7 @@ border-radius:3px
 .instagram{
 background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)
 }
-.facebook{
-background:#1877f2
-}
+.facebook{background:#1877f2}
 
 /* FOOTER */
 .footer{
