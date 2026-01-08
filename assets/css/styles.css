@@ -181,3 +181,32 @@ color:#aaa
     height: 18px;
   }
 }
+
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:9999;
+}
+.whatsapp-float svg{
+  width:28px;
+  height:28px;
+}
+@media(max-width:768px){
+  .whatsapp-float{
+    width:52px;
+    height:52px;
+    bottom:16px;
+    right:16px;
+  }
+}
