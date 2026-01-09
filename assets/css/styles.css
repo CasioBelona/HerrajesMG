@@ -54,7 +54,7 @@ mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" 
 }
 
 /* HEADER */
-.
+.header { background:#000; }
 .header-inner{
 display:flex;
 justify-content:space-between;
@@ -209,23 +209,19 @@ color:#aaa
   }
 }
 
-header {
-  position: relative;
-  min-height: 80vh;
-  background: url('../img/entrada.jpg') center / cover no-repeat;
+.visit-section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: #111;
 }
 
-header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 35%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.75));
+.visit-section h2 {
+  margin-bottom: 2rem;
 }
 
-header * {
-  position: relative;
-  z-index: 1;
+.visit-image img {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
