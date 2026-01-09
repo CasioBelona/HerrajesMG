@@ -222,8 +222,8 @@ color:#aaa
 
 
 .visit-image-wrapper {
-  width: 32vw;
-  max-width: 480px;
+  width: 27vw;
+  max-width: 420px;
   margin: 0 auto;
 }
 
@@ -235,8 +235,8 @@ color:#aaa
 
 @media (max-width: 768px) {
   .visit-image-wrapper {
-  width: 32vw;
-  max-width: 480px;
+  width: 27vw;
+  max-width: 420px;
   margin: 0 auto;
 }
 }
