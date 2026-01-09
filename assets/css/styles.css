@@ -221,8 +221,12 @@ color:#aaa
 
 
 
+.visit-section {
+  padding: 3rem 1.5rem 4rem;
+}
+
 .visit-image img {
-  max-width: 720px;
+  max-width: 520px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -231,6 +235,6 @@ color:#aaa
 
 @media (max-width: 768px) {
   .visit-image img {
-    max-width: 92%;
+    max-width: 90%;
   }
 }
