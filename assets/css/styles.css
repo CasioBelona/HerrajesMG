@@ -55,6 +55,8 @@ mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" 
 
 /* HEADER */
 .
+.header-inner{
+display:flex;
 justify-content:space-between;
 align-items:center;
 padding:1.4rem 0
@@ -208,5 +210,19 @@ color:#aaa
 }
 
 header {
-  background: url('../img/entrada.jpg') center/cover no-repeat;
+  position: relative;
+  min-height: 55vh;
+  background: url('../img/entrada.jpg') center 30% / cover no-repeat;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+header * {
+  position: relative;
+  z-index: 1;
 }
