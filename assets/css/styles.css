@@ -221,20 +221,20 @@ color:#aaa
 
 
 
-.visit-section {
-  padding: 3rem 1.5rem 4rem;
+.visit-image-wrapper {
+  width: 65vw;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.visit-image img {
-  max-width: 520px;
+.visit-image-wrapper img {
   width: 100%;
   height: auto;
-  margin: 0 auto;
   display: block;
 }
 
 @media (max-width: 768px) {
-  .visit-image img {
-    max-width: 90%;
+  .visit-image-wrapper {
+    width: 92vw;
   }
 }
