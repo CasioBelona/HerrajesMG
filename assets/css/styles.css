@@ -219,9 +219,18 @@ color:#aaa
   margin-bottom: 2rem;
 }
 
+
+
 .visit-image img {
-  max-width: 900px;
+  max-width: 720px;
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .visit-image img {
+    max-width: 92%;
+  }
 }
