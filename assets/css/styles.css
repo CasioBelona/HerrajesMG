@@ -211,15 +211,18 @@ color:#aaa
 
 header {
   position: relative;
-  min-height: 55vh;
-  background: url('../img/entrada.jpg') center 30% / cover no-repeat;
+  min-height: 80vh;
+  background: url('../img/entrada.jpg') center / cover no-repeat;
 }
 
-header::before {
+header::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 35%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.75));
 }
 
 header * {
