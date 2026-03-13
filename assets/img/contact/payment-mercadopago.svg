@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="128" viewBox="0 0 220 128" fill="none">
+  <rect x="2" y="2" width="216" height="124" rx="20" fill="#ffffff" stroke="#D5DCE5" stroke-width="4"/>
+  <rect x="24" y="26" width="172" height="76" rx="38" fill="#009EE3"/>
+  <ellipse cx="110" cy="50" rx="56" ry="20" fill="#ffffff"/>
+  <path d="M89 50c4-7 11-11 21-11s17 4 21 11c-3 3-7 4-10 4-4 0-6-2-8-4-2 2-4 4-8 4-3 0-7-1-10-4Z" fill="#009EE3"/>
+  <path d="M83 53c5 0 10 2 15 7 4 4 9 6 12 6s8-2 12-6c5-5 10-7 15-7v4c-4 0-8 2-12 6-5 5-10 8-15 8s-10-3-15-8c-4-4-8-6-12-6v-4Z" fill="#009EE3"/>
+  <text x="110" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="16" fill="#ffffff">Mercado Pago</text>
+</svg>
