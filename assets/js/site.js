@@ -174,7 +174,22 @@
     return window.matchMedia('(max-width: 768px)').matches;
   }
 
+  const MOBILE_TOPBAR_ADDRESS = 'Calz. Ignacio Zaragoza 603, Venustiano Carranza, 15000 CDMX';
+
+  function syncMobileTopbar(){
+    document.querySelectorAll('.topbar-left').forEach((block) => {
+      const address = block.querySelector('.topbar-address');
+      if(!address){ return; }
+      if(!address.dataset.fullText){
+        address.dataset.fullText = address.textContent.trim();
+      }
+      address.textContent = isMobile() ? MOBILE_TOPBAR_ADDRESS : address.dataset.fullText;
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function(){
+    syncMobileTopbar();
+
     const headerInner = document.querySelector('.header-inner');
     const nav = document.querySelector('.nav');
     if(!headerInner || !nav){ return; }
@@ -192,16 +207,18 @@
 
     const productos = nav.querySelector('.nav-productos');
     const productsLink = productos ? productos.querySelector('.nav-link') : null;
+    const productsHref = productsLink ? productsLink.getAttribute('href') : '';
     const mobileSections = productos ? Array.from(productos.querySelectorAll('.mega-col')) : [];
+    let productsNavigationArmed = false;
 
     function setMobileSectionExpanded(section, expanded){
       const link = section.querySelector('h4 a');
-      const toggle = section.querySelector('.mobile-section-toggle');
+      const toggleButton = section.querySelector('.mobile-section-toggle');
       if(link){ link.setAttribute('aria-expanded', expanded ? 'true' : 'false'); }
-      if(toggle){
-        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if(toggleButton){
+        toggleButton.setAttribute('aria-expanded', expanded ? 'true' : 'false');
         const sectionLabel = (link ? link.textContent : '').trim();
-        toggle.setAttribute('aria-label', (expanded ? 'Contraer' : 'Expandir') + (sectionLabel ? ' ' + sectionLabel : ' categoría'));
+        toggleButton.setAttribute('aria-label', (expanded ? 'Contraer' : 'Expandir') + (sectionLabel ? ' ' + sectionLabel : ' categoría'));
       }
     }
 
@@ -210,6 +227,38 @@
         section.classList.remove('mobile-section-open');
         setMobileSectionExpanded(section, false);
       });
+    }
+
+    function syncProductsLinkState(){
+      if(!productsLink){ return; }
+      if(!isMobile()){
+        if(productsHref){ productsLink.setAttribute('href', productsHref); }
+        productsLink.removeAttribute('role');
+        productsLink.removeAttribute('aria-expanded');
+        productsNavigationArmed = false;
+        return;
+      }
+
+      const menuOpen = !!(productos && productos.classList.contains('menu-open'));
+      const canNavigate = menuOpen && productsNavigationArmed && !!productsHref;
+      productsLink.setAttribute('href', canNavigate ? productsHref : '#');
+      productsLink.setAttribute('role', canNavigate ? 'link' : 'button');
+      productsLink.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+    }
+
+    function openProductsMenu(){
+      if(!productos){ return; }
+      productos.classList.add('menu-open');
+      productsNavigationArmed = true;
+      syncProductsLinkState();
+    }
+
+    function closeProductsMenu(){
+      if(!productos){ return; }
+      productos.classList.remove('menu-open');
+      productsNavigationArmed = false;
+      collapseMobileSections();
+      syncProductsLinkState();
     }
 
     mobileSections.forEach((section) => {
@@ -247,17 +296,10 @@
       document.body.classList.toggle('mobile-nav-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-      if(!open && productos){
-        productos.classList.remove('menu-open');
-        collapseMobileSections();
+      if(!open){
+        closeProductsMenu();
       }
-    }
-
-    function toggleProductsMenu(force){
-      if(!productos){ return; }
-      const open = typeof force === 'boolean' ? force : !productos.classList.contains('menu-open');
-      productos.classList.toggle('menu-open', open);
-      if(!open){ collapseMobileSections(); }
+      syncProductsLinkState();
     }
 
     toggle.addEventListener('click', function(){
@@ -268,15 +310,22 @@
     if(productsLink){
       productsLink.addEventListener('click', function(event){
         if(!isMobile()){ return; }
-        if(!document.body.classList.contains('mobile-nav-open')){
+        const navOpen = document.body.classList.contains('mobile-nav-open');
+        const menuOpen = !!(productos && productos.classList.contains('menu-open'));
+        const canNavigate = productsLink.getAttribute('href') !== '#';
+
+        if(!navOpen){
           event.preventDefault();
+          event.stopPropagation();
           setNavOpen(true);
-          toggleProductsMenu(true);
+          openProductsMenu();
           return;
         }
-        if(!productos.classList.contains('menu-open')){
+
+        if(!menuOpen || !canNavigate){
           event.preventDefault();
-          toggleProductsMenu(true);
+          event.stopPropagation();
+          openProductsMenu();
         }
       });
     }
@@ -302,10 +351,15 @@
     });
 
     window.addEventListener('resize', function(){
+      syncMobileTopbar();
       if(!isMobile()){
         setNavOpen(false);
         collapseMobileSections();
+      } else {
+        syncProductsLinkState();
       }
     });
+
+    syncProductsLinkState();
   });
 })();
