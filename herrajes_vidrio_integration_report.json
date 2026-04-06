@@ -1,0 +1,25 @@
+{
+  "new_products_total": 224,
+  "excel_rows_original": 225,
+  "duplicate_rows_removed": 1,
+  "subsections": {
+    "Bisagras de baño": 24,
+    "Soportes de fijación": 28,
+    "Jaladeras": 37,
+    "Canceles de baño": 25,
+    "Bisagras hidráulicas": 22,
+    "Barandales": 72,
+    "Repisas": 5,
+    "Chapas para vidrio": 11
+  },
+  "images_assigned": 217,
+  "images_missing": [
+    "BISAGRA PIVOTANTE-ANTEPECHO CROMO",
+    "PUNTO DE GIRO SUPERIOR SATIN",
+    "CLIP M/V 90° CROMO",
+    "CLIP TRIPLE NEGRO",
+    "CLIP TRIPLE CROMO",
+    "POSTE CUADRADO 17CM SATIN",
+    "CHAPA P/ CORREDIZA NEGRA"
+  ]
+}
