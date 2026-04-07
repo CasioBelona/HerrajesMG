@@ -40,12 +40,8 @@
     return new URL('./', window.location.href).href;
   }
 
-  function buildCatalogIndexUrl(){
-    return new URL('productos/index.html', getSiteBaseUrl()).href;
-  }
-
   function buildCatalogSearchUrl(query){
-    const url = new URL(buildCatalogIndexUrl());
+    const url = new URL('productos/index.html', getSiteBaseUrl());
     if(query && query.trim()){
       url.searchParams.set('q', query.trim());
     }
@@ -91,16 +87,10 @@
     const form = box.querySelector('form');
     if(!input || !form){ return; }
 
-    form.setAttribute('action', buildCatalogIndexUrl());
-    form.setAttribute('method', 'get');
-    input.setAttribute('name', 'q');
-
-    const clearSuggestions = () => buildSuggestions(suggestions, '', []);
-
     const refreshSuggestions = () => {
       const query = input.value;
       if(!query.trim()){
-        clearSuggestions();
+        buildSuggestions(suggestions, '', []);
         return;
       }
       ensureProductsData().then((data) => {
@@ -119,7 +109,6 @@
       const q = input.value.trim();
       if(!q){ return; }
       event.preventDefault();
-      clearSuggestions();
       window.location.href = buildCatalogSearchUrl(q);
     });
   });
@@ -134,24 +123,6 @@
     const suggestions = searchPage.querySelector('.page-suggestions');
     const form = searchPage.querySelector('.catalog-search-form');
     const params = new URLSearchParams(window.location.search);
-    const familyGrid = document.querySelector('.catalog-family-grid');
-    const initialQuery = params.get('q') || '';
-    let keepSuggestionsClosed = !!initialQuery.trim();
-
-    function setElementVisible(element, visible, displayValue){
-      if(!element){ return; }
-      element.hidden = !visible;
-      element.setAttribute('aria-hidden', visible ? 'false' : 'true');
-      element.style.display = visible ? (displayValue || '') : 'none';
-    }
-
-    if(form){
-      form.setAttribute('action', buildCatalogIndexUrl());
-      form.setAttribute('method', 'get');
-    }
-    if(input){
-      input.setAttribute('name', 'q');
-    }
 
     if(input && params.get('q')){ input.value = params.get('q'); }
 
@@ -163,20 +134,18 @@
       cards.forEach((card) => {
         const hay = normalize((card.dataset.name || '') + ' ' + (card.dataset.group || '') + ' ' + (card.dataset.subcategory || ''));
         const show = !q || hay.includes(q);
-        setElementVisible(card, show, 'flex');
+        card.hidden = !show;
         if(show){ visible++; }
       });
-
-      setElementVisible(familyGrid, !q, 'grid');
 
       if(count){
         count.textContent = q ? 'Mostrando ' + visible + ' coincidencias para "' + input.value + '".' : 'Mostrando ' + cards.length + ' productos del catálogo.';
       }
-      setElementVisible(empty, visible === 0, 'block');
+      if(empty){ empty.hidden = visible !== 0; }
 
-      if(q && !keepSuggestionsClosed){
+      if(q){
         ensureProductsData().then((data) => {
-          if(!input || normalize(input.value).trim() !== q || keepSuggestionsClosed){ return; }
+          if(!input || normalize(input.value).trim() !== q){ return; }
           buildSuggestions(suggestions, input.value, data);
         });
       } else {
@@ -185,28 +154,24 @@
     };
 
     if(input){
-      input.addEventListener('input', () => {
-        keepSuggestionsClosed = false;
-        filterCards();
-      });
+      input.addEventListener('input', filterCards);
       input.addEventListener('focus', filterCards);
     }
 
     if(form){
       form.addEventListener('submit', (event) => {
         if(!input){ return; }
-        event.preventDefault();
         const q = input.value.trim();
-        const nextUrl = new URL(buildCatalogIndexUrl());
+        event.preventDefault();
 
-        keepSuggestionsClosed = true;
-        buildSuggestions(suggestions, '', []);
-
+        const nextUrl = new URL(window.location.href);
         if(q){
           nextUrl.searchParams.set('q', q);
+        } else {
+          nextUrl.searchParams.delete('q');
         }
-
-        window.location.href = nextUrl.href;
+        window.history.replaceState({}, '', nextUrl);
+        filterCards();
       });
     }
 
