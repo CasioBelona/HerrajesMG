@@ -1909,3 +1909,2502 @@ html{
     top:calc(100% + 6px);
   }
 }
+
+/* =====================
+   HOME · PULIDO ESTÉTICO
+   Cambios aislados a index.html mediante .home-page
+   ===================== */
+.home-page .hero{
+  padding:5.4rem 0 4.8rem;
+  background:
+    radial-gradient(circle at center top, rgba(225,6,0,.13), transparent 34%),
+    linear-gradient(180deg,#101010 0%,#0b0b0b 100%);
+}
+
+.home-page .hero .container{
+  max-width:920px;
+}
+
+.home-page .hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(2.55rem,5.2vw,4.65rem);
+  line-height:1;
+  margin:0 0 .9rem;
+  letter-spacing:.015em;
+}
+
+.home-page .hero h2{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.25rem,2.2vw,1.8rem);
+  line-height:1.25;
+  margin:0 0 1.1rem;
+}
+
+.home-page .hero p{
+  max-width:620px;
+  margin:0 auto;
+  color:#d7d7d7;
+  font-size:1.05rem;
+  line-height:1.65;
+}
+
+.home-page .visit-section{
+  padding:4.4rem 1.5rem 4.7rem;
+  background:#111;
+}
+
+.home-page .visit-section h2,
+.home-page .section h3{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.55rem,2.4vw,2.2rem);
+  line-height:1.15;
+  margin:0 0 1.6rem;
+}
+
+.home-page .visit-image-wrapper{
+  width:min(58vw,760px);
+  max-width:760px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 24px 55px rgba(0,0,0,.34);
+  background:#0b0b0b;
+}
+
+.home-page .visit-image-wrapper img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.home-page .section{
+  padding:4.4rem 0;
+}
+
+.home-page #productos{
+  background:#0e0e0e;
+}
+
+.home-page #contacto{
+  background:#111;
+}
+
+.home-page #productos .container,
+.home-page #contacto .container{
+  max-width:860px;
+  padding-top:2.2rem;
+  padding-bottom:2.2rem;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));
+  box-shadow:0 18px 40px rgba(0,0,0,.20);
+}
+
+.home-page .section p{
+  max-width:560px;
+  margin:.45rem auto 0;
+  color:#d8d8d8;
+  line-height:1.65;
+}
+
+.home-page .social-bottom{
+  margin-top:1.55rem;
+}
+
+.home-page .social{
+  border-radius:999px;
+  padding:.72rem 1.35rem;
+  font-family:'Montserrat',sans-serif;
+  font-size:.88rem;
+  letter-spacing:.02em;
+  transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.home-page .social:hover,
+.home-page .social:focus-visible{
+  transform:translateY(-1px);
+  box-shadow:0 12px 26px rgba(0,0,0,.22);
+  filter:saturate(1.08);
+  outline:none;
+}
+
+@media (max-width: 768px){
+  .home-page .hero{
+    padding:3.9rem 0 3.4rem;
+  }
+
+  .home-page .hero p{
+    font-size:1rem;
+  }
+
+  .home-page .visit-section{
+    padding:3.35rem 1rem 3.55rem;
+  }
+
+  .home-page .visit-image-wrapper{
+    width:min(90vw,430px);
+    border-radius:16px;
+    box-shadow:0 18px 38px rgba(0,0,0,.30);
+  }
+
+  .home-page .section{
+    padding:3.2rem 1rem;
+  }
+
+  .home-page #productos .container,
+  .home-page #contacto .container{
+    padding:1.55rem 1.1rem;
+    border-radius:18px;
+  }
+
+  .home-page .social-bottom{
+    flex-wrap:wrap;
+    gap:.8rem;
+  }
+}
+
+
+/* =====================
+   CONTACTO · AJUSTE PUNTUAL
+   ===================== */
+.contact-card{
+  min-width:0;
+  overflow:hidden;
+}
+
+.contact-card strong{
+  max-width:100%;
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+/* =====================
+   HEADER · BARRA ROJA REFINADA
+   ===================== */
+.topbar{
+  background:#e10600;
+}
+
+.header{
+  background:#000;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  box-shadow:none;
+}
+
+@media (min-width: 769px){
+  .header-inner{
+    padding:.72rem 0;
+  }
+
+  .nav{
+    background:#e10600;
+    padding:.24rem .42rem;
+    border-radius:999px;
+    gap:.15rem;
+    box-shadow:0 8px 18px rgba(0,0,0,.22);
+  }
+
+  .nav > a,
+  .nav-productos .nav-link{
+    margin-left:0;
+    padding:.52rem 1rem;
+    border-radius:999px;
+    color:#fff;
+    line-height:1;
+    transition:background .18s ease, transform .18s ease;
+  }
+
+  .nav > a:hover,
+  .nav > a:focus-visible,
+  .nav-productos:hover .nav-link,
+  .nav-productos:focus-within .nav-link{
+    background:rgba(0,0,0,.16);
+    transform:translateY(-1px);
+  }
+
+  .nav-productos .nav-link::before{
+    background:#fff;
+    bottom:.18rem;
+    left:1rem;
+    width:calc(100% - 2rem);
+    height:2px;
+  }
+}
+
+
+/* =====================
+   HOME · LANDING COMERCIAL
+   ===================== */
+.home-page .home-slider{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(225,6,0,.22), transparent 26%),
+    linear-gradient(180deg,#0d0d0d 0%,#111 100%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.home-page .home-slider-track{
+  position:relative;
+  min-height:600px;
+}
+
+.home-page .home-slide{
+  display:none;
+  padding:4.25rem 0 4.6rem;
+}
+
+.home-page .home-slide.is-active{
+  display:block;
+}
+
+.home-page .home-slide-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);
+  align-items:center;
+  gap:2.4rem;
+}
+
+.home-page .home-slide-copy{
+  max-width:520px;
+}
+
+.home-page .home-eyebrow{
+  margin:0 0 .8rem;
+  color:#ff746f;
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.home-page .home-slide h1,
+.home-page .home-slide h2,
+.home-page .home-section h2{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  line-height:1.08;
+}
+
+.home-page .home-slide h1,
+.home-page .home-slide h2{
+  font-size:clamp(2.1rem,4.4vw,4.25rem);
+}
+
+.home-page .home-slide p,
+.home-page .home-section p,
+.home-page .home-directory p{
+  color:#d7d7d7;
+  line-height:1.65;
+}
+
+.home-page .home-slide-copy > p:not(.home-eyebrow){
+  margin:1rem 0 0;
+  max-width:46ch;
+  font-size:1.03rem;
+}
+
+.home-page .home-slide-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.85rem;
+  margin-top:1.55rem;
+}
+
+.home-page .home-slide-media,
+.home-page .home-slide-placeholder{
+  min-height:390px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+  box-shadow:0 24px 55px rgba(0,0,0,.34);
+  background:#fff;
+}
+
+.home-page .home-slide-media{
+  display:grid;
+  place-items:center;
+}
+
+.home-page .home-slide-media img{
+  width:100%;
+  height:100%;
+  max-height:470px;
+  object-fit:contain;
+  display:block;
+  background:#fff;
+}
+
+.home-page .home-slide-placeholder{
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(135deg,rgba(225,6,0,.92),rgba(70,0,0,.94)),
+    #e10600;
+  text-align:center;
+  padding:2rem;
+}
+
+.home-page .home-slide-placeholder span{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size:clamp(2rem,4vw,3.8rem);
+  line-height:1.05;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.home-page .home-slider-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:2;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(0,0,0,.48);
+  color:#fff;
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.home-page .home-slider-prev{left:1rem}
+.home-page .home-slider-next{right:1rem}
+
+.home-page .home-slider-dots{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:1.35rem;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+  gap:.55rem;
+}
+
+.home-page .home-slider-dots button{
+  width:9px;
+  height:9px;
+  padding:0;
+  border:0;
+  border-radius:999px;
+  background:rgba(255,255,255,.38);
+  cursor:pointer;
+}
+
+.home-page .home-slider-dots button.is-active{
+  width:26px;
+  background:#e10600;
+}
+
+.home-page .home-section{
+  padding:4.4rem 0;
+  background:#0e0e0e;
+}
+
+.home-page .home-section:nth-of-type(odd){
+  background:#111;
+}
+
+.home-page .home-section-head{
+  max-width:760px;
+  margin:0 auto 1.7rem;
+  text-align:center;
+}
+
+.home-page .home-section-head h2{
+  font-size:clamp(1.75rem,3vw,2.55rem);
+}
+
+.home-page .home-section-head p:not(.home-eyebrow){
+  margin:.8rem auto 0;
+  max-width:620px;
+}
+
+.home-page .best-seller-row{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:1rem;
+}
+
+.home-page .best-seller-card{
+  display:flex;
+  flex-direction:column;
+  gap:.95rem;
+  min-height:100%;
+  padding:1rem;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 18px 36px rgba(0,0,0,.18);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+
+.home-page .best-seller-card:hover,
+.home-page .best-seller-card:focus-visible{
+  transform:translateY(-2px);
+  border-color:rgba(225,6,0,.55);
+  box-shadow:0 22px 42px rgba(0,0,0,.26);
+  outline:none;
+}
+
+.home-page .best-seller-image{
+  display:grid;
+  place-items:center;
+  min-height:170px;
+  border-radius:16px;
+  background:#fff;
+  overflow:hidden;
+}
+
+.home-page .best-seller-image img{
+  width:100%;
+  height:165px;
+  object-fit:contain;
+  display:block;
+}
+
+.home-page .best-seller-card strong{
+  font-family:'Montserrat',sans-serif;
+  font-size:.86rem;
+  line-height:1.35;
+  text-align:center;
+}
+
+.home-page .home-split-card,
+.home-page .home-catalog-card,
+.home-page .home-contact-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  padding:2.1rem;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;
+  background:
+    linear-gradient(135deg,rgba(225,6,0,.12),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  box-shadow:0 22px 48px rgba(0,0,0,.22);
+}
+
+.home-page .home-split-card h2,
+.home-page .home-catalog-card h2,
+.home-page .home-contact-card h2{
+  font-size:clamp(1.65rem,2.8vw,2.45rem);
+}
+
+.home-page .home-split-card p:not(.home-eyebrow),
+.home-page .home-catalog-card p:not(.home-eyebrow),
+.home-page .home-contact-card p:not(.home-eyebrow){
+  max-width:660px;
+  margin:.75rem 0 0;
+}
+
+.home-page .home-payment-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:.95rem;
+}
+
+.home-page .home-payment-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.75rem;
+  min-height:140px;
+  padding:1rem;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  background:#151515;
+  text-align:center;
+}
+
+.home-page .home-payment-item span{
+  display:grid;
+  place-items:center;
+  width:88px;
+  height:52px;
+  padding:.55rem;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid #d9dde3;
+}
+
+.home-page .home-payment-item img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.home-page .home-payment-item strong{
+  font-family:'Montserrat',sans-serif;
+  font-size:.86rem;
+}
+
+.home-page .home-contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:.8rem;
+}
+
+.home-page .home-directory{
+  padding:4rem 0;
+  background:
+    linear-gradient(135deg,rgba(225,6,0,.18),transparent 42%),
+    #101010;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.home-page .home-directory-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1.1fr .85fr .85fr;
+  gap:2.3rem;
+}
+
+.home-page .home-directory h2,
+.home-page .home-directory h3{
+  margin:0 0 1.6rem;
+  font-family:'Montserrat',sans-serif;
+  position:relative;
+}
+
+.home-page .home-directory h2::after,
+.home-page .home-directory h3::after{
+  content:"";
+  display:block;
+  width:72px;
+  height:3px;
+  margin-top:.8rem;
+  background:#e10600;
+}
+
+.home-page .home-directory-col{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.home-page .home-directory-col a{
+  margin:.2rem 0 .65rem;
+  color:#fff;
+  text-decoration:none;
+}
+
+.home-page .home-directory-col a:hover,
+.home-page .home-directory-col a:focus-visible{
+  color:#ff746f;
+  outline:none;
+}
+
+.home-page .home-directory-socials{
+  display:flex;
+  gap:.75rem;
+  margin-top:1.2rem;
+}
+
+.home-page .home-directory-socials a{
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:8px;
+  background:#fff;
+  color:#0e0e0e;
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+@media (max-width: 1100px){
+  .home-page .home-slide-inner{
+    grid-template-columns:1fr;
+  }
+
+  .home-page .home-slide-copy{
+    max-width:760px;
+    text-align:center;
+    margin:0 auto;
+  }
+
+  .home-page .home-slide-copy > p:not(.home-eyebrow){
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .home-page .home-slide-actions{
+    justify-content:center;
+  }
+
+  .home-page .home-payment-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .home-page .home-directory-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .home-slider-track{
+    min-height:0;
+  }
+
+  .home-page .home-slide{
+    padding:3rem 0 4rem;
+  }
+
+  .home-page .home-slide-inner{
+    gap:1.6rem;
+  }
+
+  .home-page .home-slide-media,
+  .home-page .home-slide-placeholder{
+    min-height:250px;
+    border-radius:18px;
+  }
+
+  .home-page .home-slide-media img{
+    max-height:320px;
+  }
+
+  .home-page .home-slider-arrow{
+    width:36px;
+    height:36px;
+    font-size:1.65rem;
+  }
+
+  .home-page .home-slider-prev{left:.5rem}
+  .home-page .home-slider-next{right:.5rem}
+
+  .home-page .home-section{
+    padding:3.3rem 0;
+  }
+
+  .home-page .best-seller-row{
+    grid-template-columns:none;
+    grid-auto-flow:column;
+    grid-auto-columns:minmax(210px,76vw);
+    overflow-x:auto;
+    padding-bottom:.6rem;
+    scroll-snap-type:x proximity;
+  }
+
+  .home-page .best-seller-card{
+    scroll-snap-align:start;
+  }
+
+  .home-page .home-split-card,
+  .home-page .home-catalog-card,
+  .home-page .home-contact-card{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:1.45rem;
+    border-radius:20px;
+  }
+
+  .home-page .home-contact-actions{
+    justify-content:flex-start;
+  }
+
+  .home-page .home-payment-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .home-page .home-directory{
+    padding:3.2rem 0;
+  }
+
+  .home-page .home-directory-grid{
+    grid-template-columns:1fr;
+    gap:1.9rem;
+  }
+}
+
+@media (max-width: 420px){
+  .home-page .home-payment-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-page .home-slide-actions,
+  .home-page .home-contact-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .home-page .home-slide-actions .btn,
+  .home-page .home-contact-actions .btn{
+    width:100%;
+  }
+}
+
+
+/* HOME · OVERRIDE DE CONTACTO PARA EVITAR HERENCIA DEL PULIDO ANTERIOR */
+.home-page #contacto.home-contact{
+  background:#0e0e0e;
+}
+
+.home-page #contacto.home-contact .container.home-contact-card{
+  max-width:1200px;
+  padding:2.1rem;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;
+  background:
+    linear-gradient(135deg,rgba(225,6,0,.12),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  box-shadow:0 22px 48px rgba(0,0,0,.22);
+}
+
+@media (max-width: 768px){
+  .home-page #contacto.home-contact .container.home-contact-card{
+    padding:1.45rem;
+    border-radius:20px;
+  }
+}
+
+/* =====================
+   HOME · PULIDO 2
+   Logo, slider, pagos y redes
+   ===================== */
+.home-page .header-inner{
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr) 180px;
+  align-items:center;
+  gap:1rem;
+  padding:.55rem 0;
+}
+
+.home-page .site-logo{
+  justify-self:start;
+  display:inline-flex;
+  align-items:center;
+  max-width:172px;
+  text-decoration:none;
+}
+
+.home-page .site-logo img{
+  display:block;
+  width:150px;
+  height:auto;
+  max-height:64px;
+  object-fit:contain;
+  border-radius:8px;
+}
+
+.home-page .header .nav{
+  justify-self:center;
+}
+
+.home-page .home-slide-inner{
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  gap:clamp(2.4rem,4vw,4.2rem);
+}
+
+.home-page .home-slide-copy{
+  min-width:0;
+  max-width:465px;
+  position:relative;
+  z-index:1;
+}
+
+.home-page .home-slide h1,
+.home-page .home-slide h2{
+  max-width:100%;
+  font-size:clamp(2.15rem,3.45vw,3.45rem);
+  line-height:1.1;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+
+.home-page .home-slide-media,
+.home-page .home-slide-placeholder{
+  min-width:0;
+  width:100%;
+  min-height:360px;
+}
+
+.home-page .home-slide-media img{
+  max-height:430px;
+}
+
+.home-page .home-payment-grid{
+  gap:1.05rem;
+}
+
+.home-page .home-payment-item{
+  min-height:150px;
+  padding:1.1rem .95rem;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
+  border-color:rgba(255,255,255,.11);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+
+.home-page .home-payment-item span{
+  width:122px;
+  height:74px;
+  padding:0;
+  border:0;
+  border-radius:14px;
+  background:transparent;
+  overflow:visible;
+}
+
+.home-page .home-payment-item img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.home-page .home-payment-item strong{
+  margin-top:.1rem;
+  font-size:.88rem;
+}
+
+.home-page .home-directory-socials{
+  gap:.85rem;
+  flex-wrap:wrap;
+}
+
+.home-page .home-directory-socials .home-social-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.55rem;
+  width:auto;
+  height:auto;
+  min-height:42px;
+  margin:0;
+  padding:.52rem .82rem;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.01em;
+  text-transform:none;
+  box-shadow:0 10px 24px rgba(0,0,0,.24);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.home-page .home-directory-socials .home-social-button:hover,
+.home-page .home-directory-socials .home-social-button:focus-visible{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.34);
+  box-shadow:0 16px 32px rgba(0,0,0,.32);
+  color:#fff;
+}
+
+.home-page .home-directory-socials .home-social-button img{
+  width:24px;
+  height:24px;
+  display:block;
+  border-radius:7px;
+}
+
+.home-page .home-social-facebook{
+  background:linear-gradient(135deg,rgba(24,119,242,.95),rgba(13,72,148,.95));
+}
+
+.home-page .home-social-instagram{
+  background:linear-gradient(135deg,#f09433,#e6683c 28%,#dc2743 52%,#cc2366 74%,#6228d7);
+}
+
+@media (max-width: 1100px){
+  .home-page .header-inner{
+    grid-template-columns:150px minmax(0,1fr) 150px;
+  }
+
+  .home-page .site-logo img{
+    width:132px;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .header-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.85rem;
+    padding:.85rem 0;
+  }
+
+  .home-page .site-logo img{
+    width:132px;
+    max-height:56px;
+  }
+
+  .home-page .header .nav{
+    align-self:center;
+    justify-content:center;
+  }
+
+  .home-page .home-slide-copy{
+    max-width:680px;
+  }
+
+  .home-page .home-slide h1,
+  .home-page .home-slide h2{
+    font-size:clamp(2rem,8vw,3.15rem);
+  }
+
+  .home-page .home-slide-media,
+  .home-page .home-slide-placeholder{
+    min-height:240px;
+  }
+
+  .home-page .home-payment-item span{
+    width:112px;
+    height:68px;
+  }
+}
+
+/* =====================
+   HOME · LOGO HEADER FIX
+   ===================== */
+.home-page .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:76px;
+  padding:.48rem 0;
+  position:relative;
+}
+.home-page .site-logo{
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:40;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  max-width:190px;
+  text-decoration:none;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto;
+}
+.home-page .site-logo img{
+  display:block !important;
+  width:178px;
+  max-width:100%;
+  height:auto;
+  max-height:58px;
+  object-fit:contain;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 6px 16px rgba(0,0,0,.32);
+}
+.home-page .header .nav{
+  margin:0 auto;
+  justify-self:auto;
+  position:relative;
+  z-index:20;
+}
+@media (max-width: 1080px){
+  .home-page .site-logo img{width:145px;max-height:52px;}
+}
+@media (max-width: 768px){
+  .home-page .header-inner{min-height:0;flex-direction:column;align-items:flex-start;gap:.75rem;padding:.75rem 0;}
+  .home-page .site-logo{position:static;transform:none;max-width:160px;}
+  .home-page .site-logo img{width:145px;max-height:52px;}
+  .home-page .header .nav{align-self:center;margin:0 auto;}
+}
+
+/* =====================
+   HOME · PULIDO 3
+   Logo/header, pagos, redes y slider
+   ===================== */
+@media (min-width: 769px){
+  .home-page .header-inner{
+    min-height:76px;
+    padding:.48rem 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  .home-page .site-logo{
+    position:absolute;
+    left:calc(1rem - max(0px, calc((100vw - 1200px) / 2)) - 1.2rem);
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    max-width:none;
+    padding:0;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+  }
+
+  .home-page .site-logo img{
+    width:clamp(124px, 9.2vw, 176px);
+    max-height:62px;
+    height:auto;
+    display:block !important;
+    object-fit:contain;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+
+  .home-page .header .nav{
+    margin:0 auto;
+    position:relative;
+    z-index:20;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1399px){
+  .home-page .site-logo img{
+    width:86px;
+    max-height:48px;
+  }
+}
+
+.home-page .home-slide-inner{
+  grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+  align-items:center;
+  gap:clamp(2.6rem,4.4vw,5rem);
+}
+
+.home-page .home-slide-copy{
+  max-width:520px;
+}
+
+.home-page .home-slide h1,
+.home-page .home-slide h2{
+  font-size:clamp(2.15rem,3vw,3.18rem);
+  line-height:1.09;
+  letter-spacing:-.035em;
+  overflow-wrap:break-word;
+  text-wrap:balance;
+}
+
+.home-page .home-slide p:not(.home-eyebrow){
+  max-width:480px;
+}
+
+.home-page .home-slide-media,
+.home-page .home-slide-placeholder{
+  position:relative;
+  z-index:0;
+}
+
+.home-page .home-payment-grid{
+  gap:1.15rem;
+  align-items:stretch;
+}
+
+.home-page .home-payment-item{
+  min-height:142px;
+  padding:1.18rem 1rem;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.038),rgba(255,255,255,.014));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 12px 26px rgba(0,0,0,.16);
+}
+
+.home-page .home-payment-item span{
+  width:130px;
+  height:58px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.home-page .home-payment-item img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  filter:none;
+}
+
+.home-page .home-payment-item--amex span,
+.home-page .home-payment-item--cash span,
+.home-page .home-payment-item--transfer span{
+  height:66px;
+}
+
+.home-page .home-payment-item--mastercard span{
+  width:118px;
+}
+
+.home-page .home-payment-item--mercadopago span{
+  width:142px;
+}
+
+.home-page .home-payment-item strong{
+  margin-top:.25rem;
+  font-size:.86rem;
+  line-height:1.2;
+}
+
+.home-page .home-directory-socials{
+  align-items:center;
+  gap:1rem;
+}
+
+.home-page .home-directory-socials .home-social-button,
+.home-page .home-directory-socials .home-social-button:hover,
+.home-page .home-directory-socials .home-social-button:focus-visible{
+  width:auto;
+  min-height:0;
+  height:auto;
+  padding:0;
+  gap:.55rem;
+  background:transparent !important;
+  border:0;
+  box-shadow:none;
+  color:#fff;
+  transform:none;
+  text-decoration:none;
+}
+
+.home-page .home-directory-socials .home-social-button img{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  display:block;
+  box-shadow:0 8px 18px rgba(0,0,0,.26);
+}
+
+.home-page .home-directory-socials .home-social-button span{
+  font-size:.86rem;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+
+.home-page .home-directory-socials .home-social-button:hover span,
+.home-page .home-directory-socials .home-social-button:focus-visible span{
+  color:#ff746f;
+}
+
+@media (max-width: 768px){
+  .home-page .header-inner{
+    min-height:0;
+    padding:.8rem 0 1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.7rem;
+  }
+
+  .home-page .mobile-nav-toggle{
+    order:1;
+    align-self:center;
+  }
+
+  .home-page .site-logo{
+    order:2;
+    position:static;
+    transform:none;
+    display:inline-flex !important;
+    align-self:center;
+    justify-content:center;
+    margin:.05rem auto .1rem;
+    max-width:min(230px,72vw);
+  }
+
+  .home-page .site-logo img{
+    width:min(215px,70vw);
+    max-height:76px;
+    height:auto;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+
+  .home-page .header .nav{
+    order:3;
+    align-self:center;
+    margin:0 auto;
+  }
+
+  .home-page .home-slide-inner{
+    gap:1.6rem;
+  }
+
+  .home-page .home-slide-copy,
+  .home-page .home-slide p:not(.home-eyebrow){
+    max-width:100%;
+  }
+
+  .home-page .home-slide h1,
+  .home-page .home-slide h2{
+    font-size:clamp(1.95rem,7vw,2.75rem);
+  }
+
+  .home-page .home-payment-grid{
+    gap:.9rem;
+  }
+
+  .home-page .home-payment-item span{
+    width:118px;
+    height:54px;
+  }
+
+  .home-page .home-payment-item--mercadopago span{
+    width:128px;
+  }
+
+  .home-page .home-directory-socials{
+    gap:.9rem;
+  }
+}
+
+/* =====================
+   HOME · AJUSTE FINAL LOGO HEADER
+   ===================== */
+@media (min-width: 1500px){
+  .home-page .header-inner{
+    min-height:112px;
+    padding:.65rem 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  .home-page .site-logo{
+    position:absolute !important;
+    left:calc((1200px - 100vw) / 4);
+    top:50%;
+    transform:translate(-50%, -50%) !important;
+    z-index:12;
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    width:auto;
+    max-width:none;
+    margin:0;
+    padding:0;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+  }
+
+  .home-page .site-logo img{
+    display:block !important;
+    width:clamp(142px, 8.8vw, 168px);
+    max-width:none;
+    height:auto;
+    max-height:120px;
+    object-fit:contain;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1499px){
+  .home-page .header-inner{
+    min-height:118px;
+    padding:.72rem 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.65rem;
+  }
+
+  .home-page .site-logo{
+    position:static !important;
+    transform:none !important;
+    display:inline-flex !important;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    max-width:none;
+  }
+
+  .home-page .site-logo img{
+    width:150px;
+    max-height:108px;
+    height:auto;
+    object-fit:contain;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .site-logo{
+    order:2;
+    position:static !important;
+    transform:none !important;
+    display:inline-flex !important;
+    justify-content:center;
+    align-items:center;
+    align-self:center;
+    margin:.2rem auto .15rem;
+    max-width:min(230px,70vw);
+  }
+
+  .home-page .site-logo img{
+    width:min(190px,66vw);
+    max-height:none;
+    height:auto;
+    object-fit:contain;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+}
+
+/* =====================
+   HOME · LOGO PNG EXTRAÍDO
+   ===================== */
+@media (min-width: 769px){
+  .home-page .header-inner{
+    min-height:84px;
+    padding:.5rem 0;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .home-page .site-logo{
+    position:absolute !important;
+    left:1.35rem;
+    top:50%;
+    transform:translateY(-50%) !important;
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    width:188px;
+    max-width:none;
+    margin:0;
+    padding:0;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    z-index:10;
+  }
+
+  .home-page .site-logo img{
+    display:block !important;
+    width:180px;
+    max-width:100%;
+    max-height:92px;
+    height:auto;
+    object-fit:contain;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+  }
+
+  .home-page .header .nav{
+    margin:0 auto;
+    position:relative;
+    z-index:20;
+  }
+}
+
+@media (min-width: 1300px){
+  .home-page .site-logo{
+    left:2rem;
+    width:210px;
+  }
+
+  .home-page .site-logo img{
+    width:198px;
+    max-height:100px;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .header-inner{
+    min-height:0;
+    padding:.72rem 0 1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.7rem;
+  }
+
+  .home-page .site-logo{
+    order:2;
+    position:static !important;
+    transform:none !important;
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    max-width:none;
+    margin:.15rem 0 .05rem;
+  }
+
+  .home-page .site-logo img{
+    width:min(240px,72vw);
+    max-height:none;
+    height:auto;
+    object-fit:contain;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+  }
+}
+
+
+/* =====================
+   HOME · FIX DEFINITIVO LOGO HEADER
+   ===================== */
+@media (min-width: 769px){
+  .home-page .header{
+    background:#000;
+    overflow:visible;
+  }
+
+  .home-page .header-inner{
+    min-height:104px !important;
+    padding:.55rem 0 !important;
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .home-page .site-logo{
+    position:absolute !important;
+    left:calc((1200px - 100vw) / 2 + 2rem) !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:174px !important;
+    max-width:174px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    z-index:30 !important;
+  }
+
+  .home-page .site-logo img{
+    display:block !important;
+    width:168px !important;
+    height:auto !important;
+    max-width:168px !important;
+    max-height:104px !important;
+    object-fit:contain !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .header .nav{
+    position:relative !important;
+    z-index:20 !important;
+    margin:0 auto !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1260px){
+  .home-page .site-logo{
+    left:1.2rem !important;
+    width:150px !important;
+    max-width:150px !important;
+  }
+
+  .home-page .site-logo img{
+    width:144px !important;
+    max-width:144px !important;
+    max-height:92px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px){
+  .home-page .header-inner{
+    flex-direction:column !important;
+    min-height:0 !important;
+    gap:.5rem !important;
+  }
+
+  .home-page .site-logo{
+    position:static !important;
+    transform:none !important;
+    order:1 !important;
+    margin:0 auto .35rem !important;
+    width:160px !important;
+    max-width:160px !important;
+  }
+
+  .home-page .site-logo img{
+    width:154px !important;
+    max-width:154px !important;
+    max-height:98px !important;
+  }
+
+  .home-page .header .nav{
+    order:2 !important;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .site-logo{
+    order:2 !important;
+    position:static !important;
+    transform:none !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:.2rem auto .15rem !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .site-logo img{
+    width:min(220px,70vw) !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+}
+
+
+/* =====================
+   HOME · AJUSTE FINAL LOGO EXISTENTE
+   Solo escala/posición del PNG ya extraído
+   ===================== */
+@media (min-width: 1500px){
+  .home-page .site-logo{
+    left:calc((100vw - 1200px) / 4) !important;
+    top:50% !important;
+    transform:translate(-50%, -50%) !important;
+    width:155px !important;
+    max-width:155px !important;
+  }
+
+  .home-page .site-logo img{
+    width:155px !important;
+    max-width:155px !important;
+    max-height:96px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1499px){
+  .home-page .header-inner{
+    flex-direction:column !important;
+    gap:.55rem !important;
+    min-height:0 !important;
+  }
+
+  .home-page .site-logo{
+    position:static !important;
+    transform:none !important;
+    order:1 !important;
+    margin:0 auto .25rem !important;
+    width:150px !important;
+    max-width:150px !important;
+  }
+
+  .home-page .site-logo img{
+    width:150px !important;
+    max-width:150px !important;
+    max-height:93px !important;
+  }
+
+  .home-page .header .nav{
+    order:2 !important;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .site-logo img{
+    width:min(203px,68vw) !important;
+  }
+}
+
+
+/* =====================
+   HOME · LOGO FIX DEFINITIVO POSICIÓN
+   ===================== */
+@media (min-width: 1200px){
+  .home-page .header{
+    overflow:visible !important;
+  }
+
+  .home-page .header-inner{
+    min-height:84px !important;
+    padding:.5rem 0 !important;
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .home-page .site-logo{
+    position:absolute !important;
+    left:calc((1200px - 100vw) / 4) !important;
+    top:50% !important;
+    transform:translate(-50%, -50%) !important;
+    width:148px !important;
+    max-width:148px !important;
+    margin:0 !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    z-index:30 !important;
+  }
+
+  .home-page .site-logo img{
+    width:148px !important;
+    max-width:148px !important;
+    max-height:90px !important;
+    height:auto !important;
+    object-fit:contain !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    display:block !important;
+  }
+
+  .home-page .header .nav{
+    position:relative !important;
+    z-index:20 !important;
+    margin:0 auto !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px){
+  .home-page .header-inner{
+    min-height:0 !important;
+    padding:.65rem 0 .8rem !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:.45rem !important;
+  }
+
+  .home-page .site-logo{
+    position:static !important;
+    transform:none !important;
+    order:1 !important;
+    width:148px !important;
+    max-width:148px !important;
+    margin:0 auto .15rem !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .site-logo img{
+    width:148px !important;
+    max-width:148px !important;
+    max-height:90px !important;
+    height:auto !important;
+    object-fit:contain !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .header .nav{
+    order:2 !important;
+    margin:0 auto !important;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .site-logo{
+    order:2 !important;
+    position:static !important;
+    transform:none !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:.15rem auto .1rem !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .site-logo img{
+    width:min(200px,66vw) !important;
+    max-height:none !important;
+    height:auto !important;
+    object-fit:contain !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+}
+
+/* =====================
+   HOME · AJUSTE FINO LOGO
+   Misma posición, ligeramente más pequeño
+   ===================== */
+@media (min-width: 1200px){
+  .home-page .site-logo{
+    width:136px !important;
+    max-width:136px !important;
+  }
+
+  .home-page .site-logo img{
+    width:136px !important;
+    max-width:136px !important;
+    max-height:82px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px){
+  .home-page .site-logo{
+    width:136px !important;
+    max-width:136px !important;
+  }
+
+  .home-page .site-logo img{
+    width:136px !important;
+    max-width:136px !important;
+    max-height:82px !important;
+  }
+}
+
+@media (max-width: 768px){
+  .home-page .site-logo img{
+    width:min(188px,62vw) !important;
+  }
+}
+
+
+/* =====================
+   HOME · SECCIÓN TIENDA + COPY
+   ===================== */
+.home-page .home-store-feature{
+  padding:clamp(3.6rem,6vw,5.8rem) 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(225,6,0,.14), transparent 32%),
+    linear-gradient(180deg,#111,#0d0d0d);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.home-page .home-store-feature-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(2rem,4vw,4.2rem);
+  align-items:center;
+}
+
+.home-page .home-store-feature-media{
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.11);
+  background:#181818;
+  box-shadow:0 24px 56px rgba(0,0,0,.34);
+}
+
+.home-page .home-store-feature-media img{
+  display:block;
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+}
+
+.home-page .home-store-feature-copy{
+  max-width:560px;
+}
+
+.home-page .home-store-feature-copy h2{
+  margin:.4rem 0 1.15rem;
+  font-size:clamp(2rem,3.6vw,3.25rem);
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+
+.home-page .home-store-feature-copy p:not(.home-eyebrow){
+  color:rgba(255,255,255,.82);
+  line-height:1.75;
+  margin:0 0 1rem;
+}
+
+.home-page .home-store-feature-copy .btn{
+  margin-top:.85rem;
+}
+
+@media (max-width: 860px){
+  .home-page .home-store-feature-inner{
+    grid-template-columns:1fr;
+  }
+
+  .home-page .home-store-feature-copy{
+    max-width:100%;
+  }
+
+  .home-page .home-store-feature-media{
+    border-radius:20px;
+  }
+}
+
+
+/* =====================
+   HOME · AJUSTE IMAGEN TIENDA
+   Más presencia visual, recorte leve derecho
+   ===================== */
+@media (min-width: 861px){
+  .home-page .home-store-feature-inner{
+    grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);
+    gap:clamp(2.2rem,4.4vw,4.8rem);
+  }
+
+  .home-page .home-store-feature-media{
+    min-height:480px;
+  }
+
+  .home-page .home-store-feature-media img{
+    height:100%;
+    min-height:480px;
+    width:108%;
+    max-width:none;
+    object-fit:cover;
+    object-position:left center;
+  }
+}
+
+@media (min-width: 1200px){
+  .home-page .home-store-feature-media{
+    min-height:520px;
+  }
+
+  .home-page .home-store-feature-media img{
+    min-height:520px;
+  }
+}
+
+@media (max-width: 860px){
+  .home-page .home-store-feature-media img{
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+    object-position:left center;
+  }
+}
+
+/* =====================
+   HOME · AJUSTE ALTURA COMPLETA IMAGEN TIENDA
+   ===================== */
+@media (min-width: 861px){
+  .home-page .home-store-feature-media{
+    min-height:0 !important;
+  }
+
+  .home-page .home-store-feature-media img{
+    width:108% !important;
+    max-width:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:auto !important;
+    object-fit:unset !important;
+    object-position:initial !important;
+  }
+}
+
+@media (max-width: 860px){
+  .home-page .home-store-feature-media img{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:auto !important;
+    object-fit:unset !important;
+  }
+}
+
+
+/* =====================
+   HOME · SLIDER DESLIZANTE SOBRIO
+   ===================== */
+.home-page .home-slider{
+  overflow:hidden;
+}
+
+.home-page .home-slider-track{
+  display:flex !important;
+  width:100%;
+  will-change:transform;
+  transition:transform 680ms cubic-bezier(.22,.61,.36,1);
+}
+
+.home-page .home-slide{
+  position:relative !important;
+  flex:0 0 100%;
+  width:100%;
+  min-width:100%;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto;
+  transform:none !important;
+}
+
+.home-page .home-slide:not(.is-active){
+  pointer-events:none;
+}
+
+.home-page .home-slide .home-slide-copy,
+.home-page .home-slide .home-slide-media,
+.home-page .home-slide .home-slide-placeholder{
+  transition:transform 680ms cubic-bezier(.22,.61,.36,1), opacity 420ms ease;
+}
+
+.home-page .home-slide.is-active .home-slide-copy,
+.home-page .home-slide.is-active .home-slide-media,
+.home-page .home-slide.is-active .home-slide-placeholder{
+  transform:translateX(0);
+  opacity:1;
+}
+
+.home-page .home-slide:not(.is-active) .home-slide-copy{
+  transform:translateX(12px);
+  opacity:.92;
+}
+
+.home-page .home-slide:not(.is-active) .home-slide-media,
+.home-page .home-slide:not(.is-active) .home-slide-placeholder{
+  transform:translateX(-12px);
+  opacity:.94;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .home-page .home-slider-track,
+  .home-page .home-slide .home-slide-copy,
+  .home-page .home-slide .home-slide-media,
+  .home-page .home-slide .home-slide-placeholder{
+    transition:none !important;
+  }
+}
+
+
+/* =====================
+   HOME · FIX CARRUSEL HORIZONTAL REAL
+   Corrige pantalla negra en slides posteriores
+   ===================== */
+.home-page .home-slider{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.home-page .home-slider-track{
+  position:relative !important;
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  width:100% !important;
+  min-height:clamp(520px, 68vh, 720px) !important;
+  transition:transform 680ms cubic-bezier(.22,.61,.36,1) !important;
+  will-change:transform;
+}
+
+.home-page .home-slide{
+  position:relative !important;
+  inset:auto !important;
+  display:flex !important;
+  flex:0 0 100% !important;
+  width:100% !important;
+  min-width:100% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  pointer-events:auto;
+}
+
+.home-page .home-slide-inner{
+  width:100% !important;
+}
+
+.home-page .home-slide:not(.is-active){
+  pointer-events:none;
+}
+
+.home-page .home-slide .home-slide-copy,
+.home-page .home-slide .home-slide-media,
+.home-page .home-slide .home-slide-placeholder{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+@media (max-width: 768px){
+  .home-page .home-slider-track{
+    min-height:auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .home-page .home-slider-track{
+    transition:none !important;
+  }
+}
+
+
+/* =====================
+   HOME · COPY TIENDA JUSTIFICADO
+   ===================== */
+.home-page .home-store-feature-copy p:not(.home-eyebrow){
+  text-align:justify;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:auto;
+  overflow-wrap:break-word;
+}
+
+
+/* =====================
+   HOME · MOBILE CONSOLIDATION PASS
+   iPhone / Android · solo inicio
+   ===================== */
+@media (max-width: 768px){
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+
+  .home-page .container{
+    width:100%;
+    max-width:100%;
+    padding-left:1rem;
+    padding-right:1rem;
+  }
+
+  .home-page .topbar{
+    position:relative;
+    z-index:1300;
+  }
+
+  .home-page .topbar-inner{
+    padding:.42rem 0;
+  }
+
+  .home-page .topbar-address{
+    display:block !important;
+    max-width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:.72rem;
+    line-height:1.25;
+    font-weight:600;
+  }
+
+  .home-page .topbar-separator,
+  .home-page .topbar-phone,
+  .home-page .topbar-right{
+    display:none !important;
+  }
+
+  .home-page .header{
+    position:relative;
+    z-index:1250;
+  }
+
+  .home-page .header-inner{
+    min-height:0 !important;
+    padding:.72rem 0 .86rem !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:.62rem !important;
+  }
+
+  .home-page .mobile-nav-toggle{
+    order:1;
+    align-self:center;
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    background:#111;
+    border:1px solid rgba(255,255,255,.16);
+  }
+
+  .home-page .site-logo{
+    order:2 !important;
+    position:static !important;
+    transform:none !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:.05rem auto 0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .site-logo img{
+    width:min(178px,58vw) !important;
+    max-width:min(178px,58vw) !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+
+  .home-page .header .nav{
+    order:3 !important;
+    top:calc(100% + .55rem) !important;
+    left:50% !important;
+    right:auto !important;
+    width:min(calc(100vw - 1.4rem), 430px) !important;
+    width:min(calc(100dvw - 1.4rem), 430px) !important;
+    max-height:calc(100vh - 9rem);
+    max-height:calc(100dvh - 9rem);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    transform:translateX(-50%) !important;
+    padding:.58rem .78rem .72rem !important;
+    border-radius:18px !important;
+    background:linear-gradient(180deg,#141414 0%,#0b0b0b 100%) !important;
+  }
+
+  .home-page .nav > a,
+  .home-page .nav-productos .nav-link{
+    min-height:48px !important;
+    padding:.82rem .9rem !important;
+    align-items:center;
+    justify-content:flex-start;
+    font-size:.92rem;
+  }
+
+  .home-page .nav-productos.menu-open .mega-menu,
+  .home-page .nav-productos.menu-open:hover .mega-menu,
+  .home-page .nav-productos.menu-open:focus-within .mega-menu,
+  .home-page .nav-productos.menu-open .mega-menu:hover{
+    max-height:calc(100vh - 14rem) !important;
+    max-height:calc(100dvh - 14rem) !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .home-page .home-slider{
+    touch-action:pan-y;
+  }
+
+  .home-page .home-slider-track{
+    min-height:auto !important;
+    align-items:stretch !important;
+  }
+
+  .home-page .home-slide{
+    padding:2.2rem 0 3.35rem !important;
+    align-items:stretch !important;
+  }
+
+  .home-page .home-slide-inner{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:1.35rem !important;
+    align-items:center !important;
+  }
+
+  .home-page .home-slide-copy{
+    max-width:100% !important;
+    text-align:center;
+    margin:0 auto;
+  }
+
+  .home-page .home-eyebrow{
+    font-size:.7rem;
+    letter-spacing:.14em;
+    margin-bottom:.55rem;
+  }
+
+  .home-page .home-slide h1,
+  .home-page .home-slide h2{
+    font-size:clamp(1.78rem,7.2vw,2.42rem) !important;
+    line-height:1.08 !important;
+    letter-spacing:-.03em;
+    text-wrap:balance;
+  }
+
+  .home-page .home-slide-copy > p:not(.home-eyebrow),
+  .home-page .home-slide p:not(.home-eyebrow){
+    max-width:34ch !important;
+    margin:.78rem auto 0 !important;
+    font-size:.96rem;
+    line-height:1.58;
+  }
+
+  .home-page .home-slide-actions{
+    margin-top:1.1rem;
+    gap:.68rem;
+  }
+
+  .home-page .home-slide-media,
+  .home-page .home-slide-placeholder{
+    min-height:0 !important;
+    border-radius:18px !important;
+  }
+
+  .home-page .home-slide-media{
+    padding:.42rem;
+    background:#fff;
+  }
+
+  .home-page .home-slide-media img{
+    width:100% !important;
+    height:auto !important;
+    max-height:292px !important;
+    object-fit:contain !important;
+    background:#fff;
+  }
+
+  .home-page .home-slider-arrow{
+    width:34px !important;
+    height:34px !important;
+    font-size:1.45rem !important;
+    background:rgba(0,0,0,.58) !important;
+  }
+
+  .home-page .home-slider-prev{left:.42rem !important;}
+  .home-page .home-slider-next{right:.42rem !important;}
+
+  .home-page .home-slider-dots{
+    bottom:1rem !important;
+  }
+
+  .home-page .home-section{
+    padding:3rem 0 !important;
+  }
+
+  .home-page .home-section-head{
+    margin-bottom:1.35rem;
+  }
+
+  .home-page .home-section-head h2,
+  .home-page .home-split-card h2,
+  .home-page .home-catalog-card h2,
+  .home-page .home-contact-card h2,
+  .home-page .home-store-feature-copy h2{
+    font-size:clamp(1.58rem,6.8vw,2.1rem) !important;
+    line-height:1.12 !important;
+    text-wrap:balance;
+  }
+
+  .home-page .best-seller-row{
+    grid-template-columns:none !important;
+    grid-auto-flow:column !important;
+    grid-auto-columns:minmax(218px,78vw) !important;
+    gap:.86rem !important;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    padding:.1rem 1rem .8rem;
+    margin-left:-1rem;
+    margin-right:-1rem;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:1rem;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+
+  .home-page .best-seller-row::-webkit-scrollbar{display:none;}
+
+  .home-page .best-seller-card{
+    scroll-snap-align:start;
+    border-radius:18px;
+    padding:.9rem;
+  }
+
+  .home-page .best-seller-image{
+    min-height:168px;
+  }
+
+  .home-page .best-seller-image img{
+    height:160px;
+  }
+
+  .home-page .home-store-feature{
+    padding:3rem 0 !important;
+  }
+
+  .home-page .home-store-feature-inner{
+    grid-template-columns:1fr !important;
+    gap:1.45rem !important;
+  }
+
+  .home-page .home-store-feature-media{
+    border-radius:20px !important;
+  }
+
+  .home-page .home-store-feature-media img{
+    width:100% !important;
+    height:auto !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    aspect-ratio:auto !important;
+    object-fit:unset !important;
+  }
+
+  .home-page .home-store-feature-copy{
+    max-width:100% !important;
+  }
+
+  .home-page .home-store-feature-copy p:not(.home-eyebrow){
+    font-size:.96rem;
+    line-height:1.68;
+    text-align:justify;
+    text-align-last:left;
+  }
+
+  .home-page .home-split-card,
+  .home-page .home-catalog-card,
+  .home-page .home-contact-card{
+    flex-direction:column !important;
+    align-items:stretch !important;
+    padding:1.28rem !important;
+    border-radius:20px !important;
+    gap:1rem !important;
+  }
+
+  .home-page .home-split-card .btn,
+  .home-page .home-catalog-card .btn,
+  .home-page .home-contact-actions .btn,
+  .home-page .home-slide-actions .btn{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .home-page .home-payment-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:.8rem !important;
+  }
+
+  .home-page .home-payment-item{
+    min-height:124px !important;
+    padding:.85rem .58rem !important;
+    border-radius:16px !important;
+  }
+
+  .home-page .home-payment-item span{
+    width:112px !important;
+    max-width:100% !important;
+    height:52px !important;
+  }
+
+  .home-page .home-payment-item--mercadopago span{width:122px !important;}
+  .home-page .home-payment-item--mastercard span{width:102px !important;}
+
+  .home-page .home-payment-item strong{
+    font-size:.78rem !important;
+    line-height:1.2;
+  }
+
+  .home-page .home-contact-actions{
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+  }
+
+  .home-page .home-directory{
+    padding:3rem 0 !important;
+  }
+
+  .home-page .home-directory-grid{
+    grid-template-columns:1fr !important;
+    gap:1.6rem !important;
+  }
+
+  .home-page .home-directory h2,
+  .home-page .home-directory h3{
+    margin-bottom:1.15rem !important;
+  }
+
+  .home-page .home-directory-socials{
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+
+  .home-page .home-directory-socials .home-social-button img{
+    width:32px !important;
+    height:32px !important;
+  }
+}
+
+@media (max-width: 480px){
+  .home-page .container{
+    padding-left:.92rem;
+    padding-right:.92rem;
+  }
+
+  .home-page .header .nav{
+    width:calc(100vw - 1.1rem) !important;
+    width:calc(100dvw - 1.1rem) !important;
+  }
+
+  .home-page .home-slide{
+    padding-top:2rem !important;
+  }
+
+  .home-page .home-slide-media img{
+    max-height:266px !important;
+  }
+
+  .home-page .best-seller-row{
+    grid-auto-columns:minmax(210px,82vw) !important;
+  }
+
+  .home-page .home-store-feature-copy p:not(.home-eyebrow){
+    text-align:left;
+  }
+}
+
+@media (max-width: 340px){
+  .home-page .home-payment-grid{
+    grid-template-columns:1fr !important;
+  }
+}

@@ -11,7 +11,7 @@
 <link href="assets/css/styles.css" rel="stylesheet"/>
 <link href="favicon.ico" rel="icon"/>
 </head>
-<body>
+<body class="home-page">
 <div class="topbar">
 <div class="container topbar-inner">
 <div class="topbar-left">
@@ -25,6 +25,9 @@
 </div>
 <header class="header">
 <div class="container header-inner">
+<a class="site-logo" href="#hero" aria-label="Herrajes MG inicio">
+<img src="assets/img/home/logo-header-clean.png" alt="Herrajes MG"/>
+</a>
 <nav class="nav">
 <a href="#hero">Inicio</a>
 <div class="nav-productos"><a class="nav-link" href="productos/index.html">Productos</a><div aria-label="Menú de productos" class="mega-menu">
@@ -41,36 +44,213 @@
 </nav>
 </div>
 </header>
-<section class="hero" id="hero">
+<section class="home-slider" id="hero" aria-label="Presentación principal">
+<div class="home-slider-track" data-home-slider>
+<article class="home-slide is-active">
+<div class="container home-slide-inner">
+<div class="home-slide-copy">
+<p class="home-eyebrow">Herrajes MG</p>
+<h1>Inteligencia y solución en herrajes</h1>
+<p>Herrajes y sistemas para aluminio, vidrio y accesorios de instalación.</p>
+<div class="home-slide-actions">
+<a class="btn btn-primary" href="productos/index.html">Ver productos</a>
+<a class="btn btn-secondary" href="contacto/index.html">Contacto</a>
+</div>
+</div>
+<div class="home-slide-media">
+<img alt="Herrajes para aluminio Herrajes MG" src="assets/img/home/slide-1.jpg"/>
+</div>
+</div>
+</article>
+<article class="home-slide">
+<div class="container home-slide-inner">
+<div class="home-slide-copy">
+<p class="home-eyebrow">Silicones y selladores</p>
+<h2>Materiales para instalación y acabado</h2>
+<p>Consulta disponibilidad de líneas, colores y presentaciones.</p>
+<div class="home-slide-actions">
+<a class="btn btn-primary" href="productos/index.html?q=silicon">Buscar productos</a>
+</div>
+</div>
+<div class="home-slide-media">
+<img alt="Silicones y selladores Herrajes MG" src="assets/img/home/slide-2.jpg"/ loading="lazy">
+</div>
+</div>
+</article>
+<article class="home-slide">
+<div class="container home-slide-inner">
+<div class="home-slide-copy">
+<p class="home-eyebrow">Línea Española</p>
+<h2>Troqueles y sistemas especializados</h2>
+<p>Soluciones para proyectos que requieren precisión y compatibilidad técnica.</p>
+<div class="home-slide-actions">
+<a class="btn btn-primary" href="categorias/linea-espanola.html">Ver línea</a>
+</div>
+</div>
+<div class="home-slide-media">
+<img alt="Troqueles línea española Herrajes MG" src="assets/img/home/slide-3.jpg"/ loading="lazy">
+</div>
+</div>
+</article>
+<article class="home-slide home-slide--placeholder">
+<div class="container home-slide-inner">
+<div class="home-slide-copy">
+<p class="home-eyebrow">Herrajes para Vidrio</p>
+<h2>Componentes para canceles, barandales y fijación</h2>
+<p>Consulta opciones de bisagras, soportes, jaladeras y sistemas corredizos.</p>
+<div class="home-slide-actions">
+<a class="btn btn-primary" href="categorias/herrajes-para-vidrio.html">Ver categoría</a>
+</div>
+</div>
+<div class="home-slide-media">
+<img alt="Herrajes para vidrio templado Herrajes MG" src="assets/img/home/slide-vidrio-templado.jpg"/ loading="lazy">
+</div>
+</div>
+</article>
+</div>
+<button class="home-slider-arrow home-slider-prev" type="button" aria-label="Slide anterior" data-home-slider-prev>‹</button>
+<button class="home-slider-arrow home-slider-next" type="button" aria-label="Slide siguiente" data-home-slider-next>›</button>
+<div class="home-slider-dots" aria-label="Controles del slider" data-home-slider-dots></div>
+</section>
+
+<section class="home-section home-best-sellers" id="mas-vendidos">
 <div class="container">
-<h1>Herrajes MG</h1>
-<h2>Inteligencia y solución en herrajes</h2>
-<p>Herrajes y sistemas de sujeción para vidrio</p>
+<div class="home-section-head">
+<p class="home-eyebrow">Más vendidos</p>
+<h2>Productos de alta rotación</h2>
+<p>Referencias frecuentes para instalación en aluminio y vidrio.</p>
+</div>
+<div class="best-seller-row">
+<a class="best-seller-card" href="productos/chapa-p-puerta-de-aluminio-cilindro-mariposa-blanca-borui.html">
+<span class="best-seller-image"><img alt="CHAPA P/ PUERTA DE ALUMINIO CILINDRO MARIPOSA BLANCA (BORUI)" src="assets/img/productos/chapa-borui-cilindro-mariposa.png"/ loading="lazy"></span>
+<strong>CHAPA P/ PUERTA DE ALUMINIO CILINDRO MARIPOSA BLANCA (BORUI)</strong>
+</a>
+<a class="best-seller-card" href="productos/clip-m-v-satin.html">
+<span class="best-seller-image"><img alt="CLIP M/V SATIN" src="assets/img/productos/clip-m-v-satin.webp"/ loading="lazy"></span>
+<strong>CLIP M/V SATIN</strong>
+</a>
+<a class="best-seller-card" href="productos/sistema-bacalar-satin-1-50m.html">
+<span class="best-seller-image"><img alt="SISTEMA BACALAR SATIN 1.50M" src="assets/img/productos/sistema-bacalar-satin-1-50m.webp"/ loading="lazy"></span>
+<strong>SISTEMA BACALAR SATIN 1.50M</strong>
+</a>
+<a class="best-seller-card" href="productos/bisagra-m-v-satin.html">
+<span class="best-seller-image"><img alt="BISAGRA M/V SATIN" src="assets/img/productos/bisagra-m-v-satin.png"/ loading="lazy"></span>
+<strong>BISAGRA M/V SATIN</strong>
+</a>
+<a class="best-seller-card" href="productos/chapa-de-gancho-tetrallave-blanca-borui.html">
+<span class="best-seller-image"><img alt="CHAPA DE GANCHO TETRALLAVE BLANCA (BORUI)" src="assets/img/productos/chapa-de-gancho.png"/ loading="lazy"></span>
+<strong>CHAPA DE GANCHO TETRALLAVE BLANCA (BORUI)</strong>
+</a>
+</div>
 </div>
 </section>
-<section class="visit-section">
-<h2>Visítanos en nuestra sucursal</h2>
-<div class="visit-image-wrapper">
-<img alt="Sucursal Herrajes MG" src="assets/img/entrada.jpg"/>
+
+
+<section class="home-store-feature" aria-labelledby="home-store-title">
+<div class="container home-store-feature-inner">
+<div class="home-store-feature-media">
+<img src="assets/img/entrada.jpg" alt="Fachada de tienda Herrajes MG"/ loading="lazy">
+</div>
+<div class="home-store-feature-copy">
+<p class="home-eyebrow">Productos y soluciones</p>
+<h2 id="home-store-title">Herrajes para instalación profesional</h2>
+<p>En Herrajes MG ofrecemos herrajes, accesorios y consumibles para sistemas de aluminio y vidrio. Nuestro catálogo reúne líneas nacionales, línea española, Duovent, herrajes para vidrio y productos de uso frecuente en instalación y mantenimiento.</p>
+<p>Contamos con chapas, cerraduras, bisagras, jaladeras, carretillas, escuadras, separadores, silicones, selladores, felpas, cintas y más soluciones para proyectos técnicos y profesionales.</p>
+<a class="btn btn-primary" href="productos/index.html">Ver catálogo</a>
+</div>
 </div>
 </section>
-<section class="section" id="productos">
-<div class="container">
-<h3>Productos</h3>
-<p>Amplio inventario disponible en tienda.</p>
+
+<section class="home-section home-shipping" id="envios">
+<div class="container home-split-card">
+<div>
+<p class="home-eyebrow">Cobertura</p>
+<h2>Envíos a toda la República</h2>
+<p>Preparamos pedidos para envío nacional. Consulta disponibilidad, tiempos y cobertura según tu ubicación.</p>
+</div>
+<a class="btn btn-primary" href="https://wa.me/525519155811?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20env%C3%ADos" target="_blank" rel="noopener noreferrer">Consultar envío</a>
 </div>
 </section>
-<section class="section" id="contacto">
+
+<section class="home-section home-catalog" id="catalogo">
+<div class="container home-catalog-card">
+<div>
+<p class="home-eyebrow">Catálogo</p>
+<h2>Descarga nuestro catálogo</h2>
+<p>Consulta nuestras líneas de producto en un solo archivo y revisa opciones disponibles para tus proyectos.</p>
+</div>
+<a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1rggimsvWGSmZBB8NeMBM2ciNZKbeS4DC" target="_blank" rel="noopener noreferrer">Descargar catálogo</a>
+</div>
+</section>
+
+<section class="home-section home-payments" id="formas-de-pago">
 <div class="container">
+<div class="home-section-head">
+<p class="home-eyebrow">Formas de pago</p>
+<h2>Pagos aceptados</h2>
+</div>
+<div class="home-payment-grid">
+<div class="home-payment-item home-payment-item--cash"><span><img alt="Ícono de efectivo" src="assets/img/contact/payment-cash-clean.svg"/></span><strong>Efectivo</strong></div>
+<div class="home-payment-item home-payment-item--visa"><span><img alt="Logo de Visa" src="assets/img/contact/payment-visa.png"/></span><strong>Visa</strong></div>
+<div class="home-payment-item home-payment-item--mastercard"><span><img alt="Logo de MasterCard" src="assets/img/contact/payment-mastercard.png"/></span><strong>MasterCard</strong></div>
+<div class="home-payment-item home-payment-item--amex"><span><img alt="Logo de American Express" src="assets/img/contact/payment-amex.png"/></span><strong>American Express</strong></div>
+<div class="home-payment-item home-payment-item--mercadopago"><span><img alt="Logo de Mercado Pago" src="assets/img/contact/payment-mercadopago.png"/></span><strong>Mercado Pago</strong></div>
+<div class="home-payment-item home-payment-item--transfer"><span><img alt="Ícono de transferencia" src="assets/img/contact/payment-transfer-clean.svg"/></span><strong>Transferencia</strong></div>
+</div>
+</div>
+</section>
+
+<section class="home-section home-contact" id="contacto">
+<div class="container home-contact-card">
+<div>
+<p class="home-eyebrow">Contacto</p>
+<h2>¿Tienes alguna duda o necesitas encontrar un producto?</h2>
+<p>Escríbenos para consultar disponibilidad, compatibilidad o información de líneas.</p>
+</div>
+<div class="home-contact-actions">
+<a class="btn btn-primary" href="https://wa.me/525519155811" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="btn btn-secondary" href="tel:+525519155811">55 1915 5811</a>
+<a class="btn btn-secondary" href="mailto:herrajesmg.hmg@gmail.com">Correo</a>
+</div>
+</div>
+</section>
+
+<section class="home-directory" aria-label="Resumen de navegación">
+<div class="container home-directory-grid">
+<div class="home-directory-col home-directory-brand">
+<h2>Herrajes MG</h2>
+<p>Herrajes y soluciones para aluminio, vidrio y accesorios de instalación.</p>
+<div class="home-directory-socials">
+<a class="home-social-button home-social-facebook" href="https://www.facebook.com/share/17X695ht6Q/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Facebook de Herrajes MG">
+<img src="assets/img/contact/icon-facebook.svg" alt="" aria-hidden="true"/>
+<span>Facebook</span>
+</a>
+<a class="home-social-button home-social-instagram" href="https://www.instagram.com/herrajesmg.oficial" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Herrajes MG">
+<img src="assets/img/contact/icon-instagram.svg" alt="" aria-hidden="true"/>
+<span>Instagram</span>
+</a>
+</div>
+</div>
+<div class="home-directory-col">
 <h3>Contacto</h3>
-<p>Tel. / WhatsApp: 55 1915 5811</p>
-<p>Email: herrajesmg.hmg@gmail.com</p>
-<div class="social-bottom">
-<a class="social instagram" href="https://www.instagram.com/herrajesmg.oficial">Instagram</a>
-<a class="social facebook" href="https://www.facebook.com/share/17X695ht6Q/">Facebook</a>
+<p>Calz. Ignacio Zaragoza 603, Puebla, Venustiano Carranza, 15000 Ciudad de México, CDMX</p>
+<p>55 1915 5811</p>
+</div>
+<div class="home-directory-col">
+<h3>Navegación</h3>
+<a href="productos/index.html">Productos</a>
+<a href="contacto/index.html">Contacto</a>
+<a href="contacto/index.html">Ubicación</a>
+</div>
+<div class="home-directory-col">
+<h3>Información</h3>
+<a href="#catalogo">Catálogo</a>
+<a href="#formas-de-pago">Formas de pago</a>
+<a href="#envios">Envíos</a>
 </div>
 </div>
 </section>
+
 <footer class="footer">
 © Herrajes MG
 </footer>
@@ -81,6 +261,82 @@
 <path d="M16 3C8.82 3 3 8.82 3 16c0 2.54.75 5.02 2.17 7.13L3 29l5.99-2.13A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.73c-2.19 0-4.33-.58-6.21-1.68l-.45-.26-3.55 1.26 1.19-3.46-.29-.47A10.7 10.7 0 1 1 16 26.73z" fill="white"></path>
 </svg>
 </a>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('[data-home-slider]');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.home-slide'));
+  const prev = document.querySelector('[data-home-slider-prev]');
+  const next = document.querySelector('[data-home-slider-next]');
+  const dotsWrap = document.querySelector('[data-home-slider-dots]');
+  let current = 0;
+  let timer = null;
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    slider.style.transform = 'translateX(' + (-current * 100) + '%)';
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+    if (dotsWrap) {
+      Array.from(dotsWrap.children).forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === current);
+        dot.setAttribute('aria-current', i === current ? 'true' : 'false');
+      });
+    }
+  }
+
+  function start() {
+    stop();
+    timer = window.setInterval(() => goTo(current + 1), 3500);
+  }
+
+  function stop() {
+    if (timer) window.clearInterval(timer);
+  }
+
+  if (dotsWrap) {
+    slides.forEach((_, i) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.setAttribute('aria-label', 'Ir al slide ' + (i + 1));
+      button.addEventListener('click', function () {
+        goTo(i);
+        start();
+      });
+      dotsWrap.appendChild(button);
+    });
+  }
+
+  if (prev) prev.addEventListener('click', function () { goTo(current - 1); start(); });
+  if (next) next.addEventListener('click', function () { goTo(current + 1); start(); });
+
+  slider.addEventListener('mouseenter', stop);
+  slider.addEventListener('mouseleave', start);
+  slider.addEventListener('focusin', stop);
+  slider.addEventListener('focusout', start);
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  slider.addEventListener('touchstart', function (event) {
+    if (!event.touches || event.touches.length !== 1) return;
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+    stop();
+  }, { passive: true });
+  slider.addEventListener('touchend', function (event) {
+    if (!event.changedTouches || event.changedTouches.length !== 1) { start(); return; }
+    const dx = event.changedTouches[0].clientX - touchStartX;
+    const dy = event.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > 46 && Math.abs(dx) > Math.abs(dy) * 1.35) {
+      goTo(current + (dx < 0 ? 1 : -1));
+    }
+    start();
+  }, { passive: true });
+
+  goTo(0);
+  start();
+});
+</script>
 <script src="assets/js/site.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
